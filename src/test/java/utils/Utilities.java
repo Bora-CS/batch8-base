@@ -13,6 +13,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utilities {
 	private static String mainHandle = null;
+	
+	public static WebDriver driver;
+
+	public Utilities(WebDriver passedDriver) {
+		passedDriver = driver;
+	}
+
+	public static void fullscreen() {
+		driver.manage().window().fullscreen();
+	}
 
 	public static void wait(int seconds) {
 		try {
