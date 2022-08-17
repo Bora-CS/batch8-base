@@ -13,6 +13,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utilities {
 	private static String mainHandle = null;
+	public static WebDriver driver;
+	
+	
+
+	public void clickElement(By locator) {
+		driver.findElement(locator).click();
+	
+	}
 
 	public static void wait(int seconds) {
 		try {
