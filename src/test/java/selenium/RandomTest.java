@@ -4,7 +4,7 @@ public class RandomTest {
 
 	public static void main(String[] args) {
 		
-		System.out.println("Hello");
+		System.out.println("Automating some add experience test cases");
 
 	}
 
