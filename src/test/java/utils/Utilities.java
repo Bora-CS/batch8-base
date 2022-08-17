@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Utilities {
 	private static String mainHandle = null;
 
+	public static WebDriver driver;
 	public static void wait(int seconds) {
 		try {
 			Thread.sleep(seconds * 1000);
@@ -75,5 +76,8 @@ public class Utilities {
 		if (shouldClick) {
 			target.click();
 		}
+	}
+	public static void goToURL(String url) {
+		driver.get(url);
 	}
 }
