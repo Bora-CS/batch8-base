@@ -13,8 +13,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utilities {
-	
-	public static final String name = "Arnold Fifield";
+
+	public static final String name1 = "Arnold Fifield";
 
 	WebDriver driver;
 	private static String mainHandle = null;
