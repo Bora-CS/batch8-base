@@ -12,8 +12,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utilities {
+	
+	public static final String name = "zhi chen";
+	
 	private static String mainHandle = null;
 
+	
 	public static void wait(int seconds) {
 		try {
 			Thread.sleep(seconds * 1000);
