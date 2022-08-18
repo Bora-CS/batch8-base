@@ -18,7 +18,7 @@ public class Practice {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
