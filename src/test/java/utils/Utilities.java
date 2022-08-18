@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,9 +13,17 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utilities {
+
 	public static String name ="eva";
 	
+
 	private static String mainHandle = null;
+
+	
+	public static WebDriver driver;
+	public Utilities(WebDriver passedDriver) {
+		driver = passedDriver;
+	}
 
 	public static void wait(int seconds) {
 		try {
@@ -77,5 +86,29 @@ public class Utilities {
 		if (shouldClick) {
 			target.click();
 		}
+	}
+
+	public void setElementAttribute(String id) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementById('" + id + "').setAttribute('style', 'display: block;')");
+	}
+
+	public void clickElement(By locator) {
+		driver.findElement(locator).click();
+		Utilities.wait(1);
+	}
+
+	public void clickElementTwo(WebElement elem) {
+		elem.click();
+		Utilities.wait(1);
+	}
+
+	public void enterFrame(int index) {
+		driver.switchTo().frame(index);
+	}
+
+	public String getText(By locator) {
+		String text = driver.findElement(locator).getText();
+		return text;
 	}
 }
