@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utilities {
 
+	public static String name = "Alex";
+	
 	WebDriver driver;
 	private static String mainHandle = null;
 
