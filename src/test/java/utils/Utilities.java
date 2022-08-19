@@ -16,6 +16,10 @@ public class Utilities {
 
 	public static String Name = "eva";
 	
+	public static final String andyName = "Andy Zeng";
+	public static final String lixiaName = "Lixia";
+	public static final String kaerName = "Kaer";
+	public static final String name = "Carter Chen";
 
 	private static String mainHandle = null;
 	public static WebDriver driver;
