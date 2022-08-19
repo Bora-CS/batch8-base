@@ -14,7 +14,7 @@ public class Droppable {
 	}
 
 	public static void testDefault() {
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\chromedriver.exe");
 		driver = new ChromeDriver();
 
 		try {
