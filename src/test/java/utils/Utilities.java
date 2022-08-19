@@ -17,9 +17,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Utilities {
 	
 
+
 	static final String name = "Awzar";
 	
 	
+
+
+	public static final String name = "Li Chen";
 
 
 	WebDriver driver;
