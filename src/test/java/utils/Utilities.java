@@ -14,12 +14,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utilities {
 
-	public static String Name = "eva";
-	
+	public static String evaName = "eva";
+	public static final String nikkiName = "Nikki";
 	public static final String andyName = "Andy Zeng";
 	public static final String lixiaName = "Lixia";
 	public static final String kaerName = "Kaer";
-	public static final String name = "Carter Chen";
+	public static final String carterName = "Carter Chen";
 
 	private static String mainHandle = null;
 	public static WebDriver driver;
