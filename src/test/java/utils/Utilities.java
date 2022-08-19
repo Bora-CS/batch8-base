@@ -15,7 +15,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Utilities {
 
 
+
 	public static String name = "zhi chen";
+	
+
 
 	WebDriver driver;
 	private static String mainHandle = null;
