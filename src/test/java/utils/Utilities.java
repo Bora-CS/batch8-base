@@ -13,40 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utilities {
 
-<<<<<<< HEAD
 	public static String name = "Alex";
 	
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	public static final String name = "Alex Chen";
-=======
-	public static final String name = "Kaer";
->>>>>>> cc57c3e66606c88a2693fd8c6081797f1bee7863
-=======
-	public static final String lixiaName = "Lixia";
-	public static final String kaerName = "Kaer";
->>>>>>> 0ce9673cc7448ee5f264353d45d5f81574dec051
-=======
-
-	public static final String name = "Carter Chen";
-
->>>>>>> f029083a3c4fb9283cfbf26368f0b3fa4988328a
-=======
-=======
-	public static final String name = "claudia";
->>>>>>> 6b87eb12bb29d67d71163476445ccd0806e33d73
-	public static final String nikkiName = "Nikki";
-	public static final String andyName = "Andy Zeng";
-	public static final String lixiaName = "Lixia";
-	public static final String kaerName = "Kaer";
-	public static final String carterName = "Carter Chen";
->>>>>>> be04f92f93c848a17374f102669f0d9377fd3c00
-
->>>>>>> master
 	WebDriver driver;
 	
 	private static String mainHandle = null;
