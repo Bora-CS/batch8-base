@@ -12,22 +12,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-
 public class Utilities {
-	
 
-
-	static final String name = "Awzar";
-	
-	
-
-
-	public static final String name = "Li Chen";
-
+	public static final String name  = "Awzar";
 
 	WebDriver driver;
-	private static String mainHandle = null;
+	
 
 	public Utilities(WebDriver passedDriver) {
 		driver = passedDriver;
