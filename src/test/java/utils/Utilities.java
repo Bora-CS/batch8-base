@@ -14,10 +14,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utilities {
 
+
+	public static final String name  = "Awzar";
+
+
 	public static final String name = "Amy";
 	
 	WebDriver driver;
-	private static String mainHandle = null;
+	
 
 	public Utilities(WebDriver passedDriver) {
 		driver = passedDriver;
