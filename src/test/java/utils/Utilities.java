@@ -16,6 +16,7 @@ public class Utilities {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static final String name = "Alex Chen";
 =======
 	public static final String name = "Kaer";
@@ -24,6 +25,11 @@ public class Utilities {
 	public static final String lixiaName = "Lixia";
 	public static final String kaerName = "Kaer";
 >>>>>>> 0ce9673cc7448ee5f264353d45d5f81574dec051
+=======
+
+	public static final String name = "Carter Chen";
+
+>>>>>>> f029083a3c4fb9283cfbf26368f0b3fa4988328a
 
 	WebDriver driver;
 	private static String mainHandle = null;
