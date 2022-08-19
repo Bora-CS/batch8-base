@@ -17,8 +17,6 @@ public class Utilities {
 	public static final String name = "Qin Shu";
 
 
-	public static final String name = "Amy";
-	
 	WebDriver driver;
 	private static String mainHandle = null;
 
