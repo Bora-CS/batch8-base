@@ -13,9 +13,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utilities {
-	
+
 	public static final String name = "Nikki";
-	
+
 	WebDriver driver;
 	private static String mainHandle = null;
 
