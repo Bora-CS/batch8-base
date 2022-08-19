@@ -13,10 +13,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utilities {
-	
-	public static final String name = "Li Chen";
 
-	public static final String name="Yiran Rong";
+	public static String name = "zhi chen";
 	
 	WebDriver driver;
 	private static String mainHandle = null;
@@ -24,6 +22,7 @@ public class Utilities {
 	public Utilities(WebDriver passedDriver) {
 		driver = passedDriver;
 	}
+
 
 	public static void wait(int seconds) {
 		try {
