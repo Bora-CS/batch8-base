@@ -13,20 +13,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utilities {
-<<<<<<< HEAD
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> refs/remotes/origin/MC-001-qin
 	public static final String name = "Qin Shu";
-=======
 
-<<<<<<< HEAD
-	public static final String name = "Kaer";
->>>>>>> master
-=======
->>>>>>> refs/remotes/origin/MC-001-qin
 
 	WebDriver driver;
 	private static String mainHandle = null;
