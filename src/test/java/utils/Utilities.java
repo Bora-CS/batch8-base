@@ -18,6 +18,7 @@ public class Utilities {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static final String name = "Alex Chen";
 =======
 	public static final String name = "Kaer";
@@ -32,6 +33,9 @@ public class Utilities {
 
 >>>>>>> f029083a3c4fb9283cfbf26368f0b3fa4988328a
 =======
+=======
+	public static final String name = "claudia";
+>>>>>>> 6b87eb12bb29d67d71163476445ccd0806e33d73
 	public static final String nikkiName = "Nikki";
 	public static final String andyName = "Andy Zeng";
 	public static final String lixiaName = "Lixia";
@@ -40,6 +44,7 @@ public class Utilities {
 >>>>>>> be04f92f93c848a17374f102669f0d9377fd3c00
 
 	WebDriver driver;
+	
 	private static String mainHandle = null;
 
 	public Utilities(WebDriver passedDriver) {
