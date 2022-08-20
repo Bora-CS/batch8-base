@@ -24,6 +24,14 @@ public class Utilities {
 	WebDriver driver;
 	
 	private static String mainHandle = null;
+	public static WebDriver driver;
+	
+	
+
+	public void clickElement(By locator) {
+		driver.findElement(locator).click();
+	
+	}
 
 	public Utilities(WebDriver passedDriver) {
 		driver = passedDriver;
