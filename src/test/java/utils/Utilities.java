@@ -20,6 +20,7 @@ public class Utilities {
 	public static final String lixiaName = "Lixia";
 	public static final String kaerName = "Kaer";
 	public static final String carterName = "Carter Chen";
+	public static final String testingNameForNur = "testConflict";
 
 	WebDriver driver;
 	
