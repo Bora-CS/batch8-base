@@ -6,6 +6,7 @@ public class TestingGithubDesktop {
 		
 		//testing
 		//test conflict
+		//change from others
 	}
 
 }
