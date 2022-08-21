@@ -18,7 +18,7 @@ public class Utilities {
 
 	WebDriver driver;
 	private static String mainHandle = null;
-
+	private static String name ="Chen";
 	public Utilities(WebDriver passedDriver) {
 		driver = passedDriver;
 	}
