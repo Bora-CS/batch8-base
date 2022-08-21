@@ -6,7 +6,6 @@ public class RamdomTest {
 		
 		System.out.println("Hello");
 		System.out.println("First Test");
-		
+		System.out.println("Second Test");
 	}
-
 }
