@@ -32,8 +32,9 @@ public class Login {
 			System.out.println("Test Failed");
 			System.out.println("Expected Status Code: " + expectedStatusCode);
 			System.out.println("Actual Status Code: " + actualStatusCode);
+			System.out.println("Just for github testing");
 		}
 
-	}
+	}	
 
 }
