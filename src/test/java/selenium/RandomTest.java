@@ -1,11 +1,8 @@
 package selenium;
 
-<<<<<<< HEAD
-public class RandomTest {
 
-	public static void main(String[] args) {
-		
-=======
+
+
 import java.time.Duration;
 import java.util.List;
 
@@ -43,7 +40,7 @@ public class RandomTest {
 			driver.quit();
 		}
 
->>>>>>> master
+
 	}
 
 }
