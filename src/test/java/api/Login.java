@@ -1,8 +1,5 @@
 package api;
 
-import java.util.Map;
-
-import org.apache.commons.collections4.map.HashedMap;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -12,6 +9,7 @@ import pojo.LoginRequestBody;
 public class Login {
 
 	public static void main(String[] args) {
+
 		
 		RestAssured.baseURI="http://boratech.herokuapp.com";
 		String endpoint ="/api/auth";
@@ -49,6 +47,6 @@ public class Login {
 			System.out.println("Expected Status Code: "+ expectedStatusCode);
 			System.out.println("Actual Status Code: "+actualStatusCode);
 		}
-	}
 
-}
+
+	}}
