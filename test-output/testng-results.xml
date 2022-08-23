@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-22T22:08:51 EDT" name="Default suite" finished-at="2022-08-22T22:08:55 EDT" duration-ms="3786">
+    <groups>
+    </groups>
+    <test started-at="2022-08-22T22:08:51 EDT" name="Default test" finished-at="2022-08-22T22:08:55 EDT" duration-ms="3786">
+      <class name="apiTest.FirstTest">
+        <test-method signature="addExperience()[pri:0, instance:apiTest.FirstTest@6253c26]" started-at="2022-08-22T22:08:51 EDT" name="addExperience" finished-at="2022-08-22T22:08:55 EDT" duration-ms="3709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addExperience -->
+      </class> <!-- apiTest.FirstTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
