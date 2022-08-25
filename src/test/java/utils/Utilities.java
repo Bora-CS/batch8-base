@@ -25,6 +25,16 @@ public class Utilities {
 	WebDriver driver;
 	
 	private static String mainHandle = null;
+	
+	public static WebDriver driver;
+
+	public Utilities(WebDriver passedDriver) {
+		passedDriver = driver;
+	}
+
+	public static void fullscreen() {
+		driver.manage().window().fullscreen();
+	}
 
 	public Utilities(WebDriver passedDriver) {
 		driver = passedDriver;
