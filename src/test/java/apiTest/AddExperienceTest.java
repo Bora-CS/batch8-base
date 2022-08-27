@@ -6,7 +6,7 @@ import pojo.Experience;
 
 import static org.testng.Assert.*;
 
-public class LoginTest {
+public class AddExperienceTest {
 
 	public static void main(String[] args) {
 
