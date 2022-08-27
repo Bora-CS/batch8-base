@@ -13,6 +13,7 @@ import io.restassured.specification.RequestSpecification;
 import pojo.Experience;
 import pojo.LoginRequestBody;
 import pojo.LoginResponseBody;
+import pojo.User;
 
 public class BoraAPI {
 
@@ -58,6 +59,23 @@ public class BoraAPI {
 		JsonPath jp = response.jsonPath();
 		List<Experience> experiences = jp.getList("experience", Experience.class);
 		return experiences;
+	}
+
+	public static User getCurrentUser(String token) {
+		RestAssured.baseURI = "https://boratech.herokuapp.com";
+		String endpoint = "/api/auth";
+		RequestSpecification request = RestAssured.given();
+
+		request.header("x-auth-token", token);
+
+		Response response = request.get(endpoint);
+		int actualStatusCode = response.getStatusCode();
+		int expectedStatusCode = 200;
+
+		Assert.assertEquals(actualStatusCode, expectedStatusCode);
+
+		User user = response.getBody().as(User.class);
+		return user;
 	}
 
 }
