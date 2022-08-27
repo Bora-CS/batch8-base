@@ -1,30 +1,45 @@
 package apiTest;
 
-import java.util.List;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 import api.BoraAPI;
 import pojo.Experience;
+import pojo.Profile;
+import pojo.ProfileWithUserId;
 
 import static org.testng.Assert.*;
 
 public class AddExperienceTest {
 
-	public static void main(String[] args) {
+	@Test
+	public static void mainTest() {
 
+		// Login
 		String token = BoraAPI.login("muradil.erkin@boratechschool.com", "Boratech");
+		// Get Current User Profile
+		Profile profile = BoraAPI.getCurrentUserProfile(token);
+		int originalNumberOfExperieces = profile.experience.size();
 
+		// Add Experience
 		Experience inputExperience = new Experience("Cashier", "Ben Gong's Tea", "Annandale, VA", "2021/8/16", "", true,
 				"Best place to work in Boba Industry", null);
+		ProfileWithUserId profileAfterAdd = BoraAPI.addExperience_V2(token, inputExperience);
+		int numberOfExperiecesAfterAdd = profileAfterAdd.experience.size();
+		assertEquals(numberOfExperiecesAfterAdd, originalNumberOfExperieces + 1);
 
-		List<Experience> experiences = BoraAPI.addExperience(token, inputExperience);
-
-		boolean found = false;
-		for (Experience experience : experiences) {
+		// Delete Experience
+		String idToDelete = "";
+		for (Experience experience : profileAfterAdd.experience) {
 			if (experience.company.equals(inputExperience.company)) {
-				found = true;
+				idToDelete = experience._id;
 				break;
 			}
 		}
-		assertTrue(found);
+		Assert.assertFalse(idToDelete.isEmpty());
+		ProfileWithUserId profileAfterDelete = BoraAPI.deleteExperience(token, idToDelete);
+		int numberOfExperiecesAfterDelete = profileAfterDelete.experience.size();
+		assertEquals(numberOfExperiecesAfterDelete, numberOfExperiecesAfterAdd - 1);
 
 	}
 

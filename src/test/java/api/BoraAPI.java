@@ -13,6 +13,8 @@ import io.restassured.specification.RequestSpecification;
 import pojo.Experience;
 import pojo.LoginRequestBody;
 import pojo.LoginResponseBody;
+import pojo.Profile;
+import pojo.ProfileWithUserId;
 import pojo.User;
 
 public class BoraAPI {
@@ -61,6 +63,26 @@ public class BoraAPI {
 		return experiences;
 	}
 
+	public static ProfileWithUserId addExperience_V2(String token, Experience body) {
+		RestAssured.baseURI = "https://boratech.herokuapp.com";
+		String endpoint = "/api/profile/experience";
+		RequestSpecification request = RestAssured.given();
+
+		request.header("Content-Type", "application/json");
+		request.header("x-auth-token", token);
+
+		request.body(body);
+
+		Response response = request.put(endpoint);
+		int actualStatusCode = response.getStatusCode();
+		int expectedStatusCode = 200;
+
+		Assert.assertEquals(actualStatusCode, expectedStatusCode);
+
+		ProfileWithUserId profile = response.getBody().as(ProfileWithUserId.class);
+		return profile;
+	}
+
 	public static User getCurrentUser(String token) {
 		RestAssured.baseURI = "https://boratech.herokuapp.com";
 		String endpoint = "/api/auth";
@@ -76,6 +98,40 @@ public class BoraAPI {
 
 		User user = response.getBody().as(User.class);
 		return user;
+	}
+
+	public static Profile getCurrentUserProfile(String token) {
+		RestAssured.baseURI = "https://boratech.herokuapp.com";
+		String endpoint = "/api/profile/me";
+		RequestSpecification request = RestAssured.given();
+
+		request.header("x-auth-token", token);
+
+		Response response = request.get(endpoint);
+		int actualStatusCode = response.getStatusCode();
+		int expectedStatusCode = 200;
+
+		Assert.assertEquals(actualStatusCode, expectedStatusCode);
+
+		Profile profile = response.getBody().as(Profile.class);
+		return profile;
+	}
+
+	public static ProfileWithUserId deleteExperience(String token, String id) {
+		RestAssured.baseURI = "https://boratech.herokuapp.com";
+		String endpoint = "/api/profile/experience/" + id;
+		RequestSpecification request = RestAssured.given();
+
+		request.header("x-auth-token", token);
+
+		Response response = request.delete(endpoint);
+		int actualStatusCode = response.getStatusCode();
+		int expectedStatusCode = 200;
+
+		Assert.assertEquals(actualStatusCode, expectedStatusCode);
+
+		ProfileWithUserId profile = response.getBody().as(ProfileWithUserId.class);
+		return profile;
 	}
 
 }

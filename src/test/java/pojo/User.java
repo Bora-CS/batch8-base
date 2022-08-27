@@ -1,5 +1,7 @@
 package pojo;
 
+import utils.Constants;
+
 public class User {
 
 	public String _id;
@@ -17,7 +19,8 @@ public class User {
 	}
 
 	public String toString() {
-		return "[User] ID: " + this._id + " Name: " + this.name;
+		return Constants.LINE_BREAK + "\n[User]\nID: " + this._id + "\nName: " + this.name + "\n"
+				+ Constants.LINE_BREAK;
 	}
 
 }
