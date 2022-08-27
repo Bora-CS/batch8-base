@@ -1,6 +1,7 @@
 package apiTest;
 
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import api.BoraAPI;
 import pojo.Profile;
@@ -8,7 +9,8 @@ import pojo.User;
 
 public class AuthenticationTest {
 
-	public static void main(String[] args) {
+	@Test
+	public static void mainTest() {
 
 		String token = BoraAPI.login("muradil.erkin@boratechschool.com", "Boratech");
 		User user = BoraAPI.getCurrentUser(token);
