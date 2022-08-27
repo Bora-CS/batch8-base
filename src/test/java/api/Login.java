@@ -1,5 +1,7 @@
 package api;
 
+import org.testng.Assert;
+
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -22,17 +24,9 @@ public class Login {
 		Response response = request.post(endpoint);
 		int actualStatusCode = response.getStatusCode();
 		int expectedStatusCode = 200;
-
-		if (expectedStatusCode == actualStatusCode) {
-			LoginResponseBody responseBody = response.getBody().as(LoginResponseBody.class);
-			String token = responseBody.getToken();
-			System.out.println("Token: " + token);
-			System.out.println("Test Passed");
-		} else {
-			System.out.println("Test Failed");
-			System.out.println("Expected Status Code: " + expectedStatusCode);
-			System.out.println("Actual Status Code: " + actualStatusCode);
-		}
+		
+		Assert.assertEquals(actualStatusCode,expectedStatusCode);
+		
 
 	}
 
