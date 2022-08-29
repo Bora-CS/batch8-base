@@ -21,9 +21,10 @@ public class Utilities {
 	public static final String kaerName = "Kaer";
 	public static final String carterName = "Carter Chen";
 	public static final String testingNameForNur = "Nurzat";
+	public static final String testingNameforCroren = "Abdusalam CROREN";
 
 	WebDriver driver;
-	
+
 	private static String mainHandle = null;
 
 	public Utilities(WebDriver passedDriver) {
