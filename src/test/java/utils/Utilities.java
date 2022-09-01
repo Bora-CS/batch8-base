@@ -26,9 +26,11 @@ public class Utilities {
 	
 	private static String mainHandle = null;
 
+
 	public Utilities(WebDriver passedDriver) {
 		driver = passedDriver;
 	}
+
 
 	public static void wait(int seconds) {
 		try {
