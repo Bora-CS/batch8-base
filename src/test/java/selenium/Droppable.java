@@ -30,7 +30,8 @@ public class Droppable {
 			action.dragAndDrop(source, target).build().perform();
 			driver.switchTo().defaultContent();
 			customeWait(3);
-
+			
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
