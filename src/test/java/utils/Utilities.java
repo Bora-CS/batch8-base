@@ -14,6 +14,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utilities {
 
+
+	public static final String chloename = "Chloe";
 	public static final String name = "claudia";
 	public static final String nikkiName = "Nikki";
 	public static final String andyName = "Andy Zeng";
@@ -21,6 +23,7 @@ public class Utilities {
 	public static final String kaerName = "Kaer";
 	public static final String carterName = "Carter Chen";
 	public static final String testingNameForNur = "Nurzat";
+
 
 	WebDriver driver;
 	
