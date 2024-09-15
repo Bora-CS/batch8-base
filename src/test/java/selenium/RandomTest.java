@@ -1,6 +1,7 @@
 package selenium;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -24,12 +25,31 @@ public class RandomTest {
 			driver.findElement(By.id("password")).sendKeys("secret_sauce" + Keys.ENTER);
 			driver.findElement(By.id("login-button")).click();
 
+			List<WebElement> ItemsNames = driver.findElements(By.xpath("//div[@class='inventory_item_name']"));
+			List<String> BoxForCart = new ArrayList<String>();
+			for (WebElement itemsName : ItemsNames) {
+				String itemName = itemsName.getText();
+				BoxForCart.add(itemName);
+			}
 			List<WebElement> items = driver
 					.findElements(By.xpath("//*[@class=\"btn btn_primary btn_small btn_inventory\"]"));
 
 			for (WebElement item : items) {
 				item.click();
 			}
+			driver.findElement(By.xpath("//a[@class ='shopping_cart_link']")).click();
+			List<WebElement> itemsInTheCart = driver.findElements(By.xpath("//div[@class='inventory_item_name']"));
+			List<String> EmtyBox = new ArrayList<String>();
+			for (WebElement itemInTheCart : itemsInTheCart) {
+				String ProductName = itemInTheCart.getText();
+				EmtyBox.add(ProductName);
+			}
+			if (BoxForCart.equals(EmtyBox)) {
+				System.out.println("Test pass");
+			}
+			System.out.println("Expect Products names: " + BoxForCart);
+			System.out.println("Actual product nammes: " + EmtyBox);
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();
